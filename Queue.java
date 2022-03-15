@@ -36,6 +36,11 @@ class Queue {
 
     // Removes the element from in front of queue.
     public int dequeue() {
+        if (s2.isEmpty()) {
+            while (!s1.isEmpty())
+                s2.push(s1.pop());
+        } i++;
+         return s2.pop();
 
     }
     
