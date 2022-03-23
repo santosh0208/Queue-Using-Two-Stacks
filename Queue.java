@@ -5,12 +5,13 @@ import java.io.*;
 import java.util.*;
 
 class Queue {
-    private Stack<Integer> s1 = new Stack<Integer>();
-    private Stack<Integer> s2 = new Stack<Integer>();
-    int i=0;
+    private Stack<Integer> s1;
+    private Stack<Integer> s2;
 
 
     public Queue() {
+        s1 = new Stack<Integer>();
+        s2= new Stack<Integer>();
 
     }
 
@@ -36,23 +37,14 @@ class Queue {
 
     // Removes the element from in front of queue.
     public int dequeue() {
-        if (s2.isEmpty()) {
-            while (!s1.isEmpty())
-                s2.push(s1.pop());
-        } i++;
-         return s2.pop();
+         return s1.pop();
 
     }
     
     // Get the front element.
     public int peek() {
-        if (!s2.isEmpty()) {
-            return s2.peek();
-        } else {
-            while (!s1.isEmpty())
-                s2.push(s1.pop());
-        }
-        return s2.peek();
+    
+        return s1.peek();
 
     }
     
